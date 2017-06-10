@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+    <title>Dein Vertretungsplan</title>	
+	
+<style>
+body {font-family: Arial;}
+table {
+	border-collapse: collapse; 
+	width: 100%;
+	}
+td, th {
+	border: 1px solid grey; 
+	text-align: center; 
+	padding: 8px;
+	}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<script>
+while(i = 1; i < document.getElementsByTagName("TD").lenght; ++i) {
+	document.getElementsByTagName("TD")[i].anchor(document.getElementsByTagName("TD")[i].innerHTML);
+
+}
+</script>
+</head>
+<body>
+<h1>Vertrettungsplan</h1>
+Suche: <input type="text"></input>
+
+<table>
+	<tr>
+		<th>Klasse</th>
+		<th>Stunde</th>
+		<th>Fach</th>
+		<th>Lehrer</th>
+	</tr>
+	<tr>
+		<td>8b</td>
+		<td>3</td>
+		<td>Deutsch</td>
+		<td>Herr Geier</td>
+	</tr>
+	<tr>
+		<td>10e</td>
+		<td>5</td>
+		<td>Sport</td>
+		<td>Frau Hubitz</td>
+	</tr>
+	<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+</table>
+</ul>
+</body>
+</html>
