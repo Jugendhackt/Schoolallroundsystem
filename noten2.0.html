@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th  {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+h1 {
+font-family: arial, sans-serif;}
+</style>
+<script>
+var durchschnitt = 3;
+var note1 = 1;
+var note2 = 2;
+function rechnen() {
+document.getElementsByTagName('TD')[durchschnitt].innerHTML = ( document.getElementsByTagName('TD')[note1].innerHTML *1 + document.getElementsByTagName('TD')[note2].innerHTML *1 ) /2;
+durchschnitt += 3;
+note1 += 3;
+note2 += 3;
+rechnen();
+}
+</script>
+</head>
+<body onload="rechnen()">
+
+<h1>Notenstand 2017</h1>
+<main>
+	
+		<table>
+		
+
+ <caption>Notenübersicht</caption>
+  <thead>
+    <tr>
+        <td rowspan="2"></td>
+		<th scope="col" rowspan="2">Mündliche Note  </th>
+		<th scope="col" rowspan="2">Note in Tests</th>
+		<th scope="col" rowspan="2">Durchschnitt</th>
+		
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <th scope="row">Biologie</th>
+      <td>1</td>
+      <td>3</td>
+	  <td></td>
+    </tr>
+    <tr>
+      <<th scope="row">Chemie</th>
+      <td>2</td>
+      <td>5</td>
+	  <td></td>
+    </tr>
+	<tr>
+		<th scope="row">Deutsch</th>
+		<td>4</td>
+		<td>1</td>
+		<td></td>
+	</tr>
+	<tr>
+		<th scope="row">Englisch</th>
+		<td>2</td>
+		<td>3</td>
+		<td></td>
+	</tr>
+	<tr>
+		<th scope="row">Erdkunde</th>
+		<td>1</td>
+		<td>2</td>
+		<td></td>
+	<tr>
+		<th scope="row">Französisch</th>
+		<td>5</td>
+		<td>3</td>
+		<td></td>
+	<tr>
+		<th scope="row">Geschichte</th>
+		<td>1</td>
+		<td>5</td>
+		<td></td>
+	<tr>
+		<th scope="row">Informatik</th>
+		<td>1</td>
+		<td>1</td>
+		<td></td>
+	<tr>
+		<th scope="row">Kunst</th>
+		<td>4</td>
+		<td>2</td>
+		<td></td>
+	<tr>
+		<th scope="row">Mathematik</th>
+		<td>1</td>
+		<td>2</td>
+		<td></td>
+	<tr>
+		<th scope="row">Musik</th>
+		<td>3</td>
+		<td>2</td>
+		<td></td>
+	<tr>
+		<th scope="row">Physik</th>
+		<td>3</td>
+		<td>2</td>
+		<td></td>
+	<tr>
+		<th scope="row">Sport</th>
+		<td>4</td>
+		<td>4</td>
+		<td></td>
+  </tbody>
