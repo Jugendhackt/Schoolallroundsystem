@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../style.css">
 		
     <title>Dein Vertretungsplan</title>	
 	
@@ -21,21 +23,54 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+.invisible {display: none;};
+.visible {display: block};
 </style>
 <script>
-function anker() {
-for(i = 0; i < document.getElementsByTagName("TD").length; i++) {
-	document.getElementsByTagName("TD")[i].id = document.getElementsByTagName("TD")[i].innerHTML;
+function zeigeAuswahl() {
+var klasse = document.getElementById("klassennum").value + document.getElementById("klassenname").value;
+
+	if(klasse == "AlleAlle") {
+		for(q = 0; q < document.getElementsByTagName("TR").length; q++) {
+			document.getElementsByTagName("TR")[q].style.display = "table-row";
+		}
+	}
+	else {
+		for(k = 1; k < document.getElementsByTagName("TR").length; k++) {
+			document.getElementsByTagName("TR")[k].style.display = "none";
+		}
+		for(i = 0; i < document.getElementsByClassName(klasse).length; i++) {
+			document.getElementsByClassName(klasse)[i].style.display = "table-row";
+		}
+	}
 }
-}
-function ankersprung() {
-	window.location="#" + document.getElementById("ankersuche").value;
-}
+
 </script>
 </head>
-<body onload="anker()">
-<h1>Vertrettungsplan</h1>
-Suche: <input type="text" id="ankersuche"></input><button onclick="ankersprung();">Suchen</button>
+<body onload="zeigeAuswahl();">
+<h1>Vertretungsplan</h1>
+Wähle deine Klasse: 
+<select id="klassennum">
+	<option>Alle</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+	<option>12</option>
+</select>
+<select id="klassenname">
+	<option>Alle</option>
+	<option>a</option>
+	<option>b</option>
+	<option>c</option>
+	<option>d</option>
+	<option>e</option>
+</select>
+<button onclick="zeigeAuswahl();">Suchen</button>
+<!--Suche: <input type="text" id="ankersuche"></input><button onclick="ankersprung();">Suchen</button>-->
 
 <table>
 	<tr>
@@ -44,85 +79,85 @@ Suche: <input type="text" id="ankersuche"></input><button onclick="ankersprung()
 		<th>Fach</th>
 		<th>Lehrer</th>
 	</tr>
-	<tr>
+	<tr class="8b">
 		<td>8b</td>
 		<td>3</td>
 		<td>Deutsch</td>
 		<td>Herr Geier</td>
 	</tr>
-	<tr>
+	<tr class="10e">
 		<td>10e</td>
 		<td>5</td>
 		<td>Sport</td>
 		<td>Frau Hubitz</td>
 	</tr>
-	<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9c">
 		<td>9c</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
 	</tr>
-		<tr>
+	<tr class="9e">
 		<td>9e</td>
 		<td>8</td>
 		<td>Chemie</td>
