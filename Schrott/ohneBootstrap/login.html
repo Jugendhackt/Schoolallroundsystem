@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" href="logo32.png" type="image/png" />
+	<link rel="shortcut icon" href="logo32.png" type="image/png" />
+	
+	<link rel="stylesheet" href="style.css">
+	
+    <title>Anmeldung für das Schoolallroundsystem</title>	
+	
+<style>
+.formular {
+	position: relative;;
+	display: block;
+	top: 80px;
+	width: 400px;
+	height: 600px;
+	background-color: rgb(255,127,0);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+div, h1, input {
+	display: inline-block;
+}
+input {
+	width: 300px;
+	height: 40px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	border: 2px solid grey;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px rgb(1,38,250);
+}
+input:focus {
+	border: 2px solid rgb(1,38,250);
+}
+.logo-big {
+	margin-top: 50px;
+}
+</style>
+<script>
+function login() {
+if (document.getElementById("user").value == "") {loginfail();}
+else if (document.getElementById("password").value == "") {loginfail();}
+else {window.location = "index.html" + "?user=" + document.getElementById("user").value + "&password=" + document.getElementById("password").value;}
+
+}
+function loginfail() alert ("Fehler beim Anmelden: Felder nicht ausgefüllt!");
+</script>
+</head>
+<body>
+	<div class="menu">
+		<a href="inhalt/" target="inhalt" class="page-title">
+			<img src="logo32.png"><span>Schoolallroundsystem</span>
+		</a>
+		<ul>
+			<li><a href="inhalt/" target="inhalt">Übersicht</a></li>
+			<li><a href="inhalt/" target="inhalt">Profil</a></li>
+			<li><a href="inhalt/" target="inhalt">Über</a></li>
+			<li><a href="inhalt/" target="inhalt">Hilfe</a></li>
+			<li><a href="login.html" target="inhalt">Abmelden</a></li>
+		</ul>
+	</div>
+
+	<div class="formular">
+		<img src="logo200.png" class="logo-big"><br>
+		<h1>Anmeldung für das <br>Schoolallroundsystem</h1><br>
+			<input type="text" placeholder="Benutzername" id="user">
+			<input type="password" placeholder="Passwort" id="password">
+			
+			<input type="submit" onclick="login();" value="Anmelden">
+	</div>
+</body>
+</html>
