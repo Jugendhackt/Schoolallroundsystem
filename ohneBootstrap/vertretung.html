@@ -23,15 +23,19 @@ tr:nth-child(even) {
 }
 </style>
 <script>
-while(i = 1; i < document.getElementsByTagName("TD").lenght; ++i) {
-	document.getElementsByTagName("TD")[i].anchor(document.getElementsByTagName("TD")[i].innerHTML);
-
+function anker() {
+for(i = 0; i < document.getElementsByTagName("TD").length; i++) {
+	document.getElementsByTagName("TD")[i].id = document.getElementsByTagName("TD")[i].innerHTML;
+}
+}
+function ankersprung() {
+	window.location="#" + document.getElementById("ankersuche").value;
 }
 </script>
 </head>
-<body>
+<body onload="anker()">
 <h1>Vertrettungsplan</h1>
-Suche: <input type="text"></input>
+Suche: <input type="text" id="ankersuche"></input><button onclick="ankersprung();">Suchen</button>
 
 <table>
 	<tr>
@@ -54,6 +58,72 @@ Suche: <input type="text"></input>
 	</tr>
 	<tr>
 		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9c</td>
+		<td>8</td>
+		<td>Chemie</td>
+		<td>Herr Meier</td>
+	</tr>
+		<tr>
+		<td>9e</td>
 		<td>8</td>
 		<td>Chemie</td>
 		<td>Herr Meier</td>
