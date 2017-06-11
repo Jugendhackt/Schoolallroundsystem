@@ -44,16 +44,26 @@ input:focus {
 }
 </style>
 <script>
+function ifcookieexist() {
+	if(document.cookie != "") {window.location = "index.html";} 
+}
 function login() {
-if (document.getElementById("user").value == "") {loginfail();}
-else if (document.getElementById("password").value == "") {loginfail();}
-else {window.location = "index.html" + "?user=" + document.getElementById("user").value + "&password=" + document.getElementById("password").value;}
-
+	if (document.getElementById("user").value == "") {loginfail();}
+	else if (document.getElementById("password").value == "") {loginfail();}
+	else {
+		document.cookie = document.getElementById("user").value;
+		window.location = "index.html";
+	}
+}
+document.onkeydown = function(event) {
+  if (event.keyCode == 13) {
+    login();
+  }
 }
 function loginfail() alert ("Fehler beim Anmelden: Felder nicht ausgefüllt!");
 </script>
 </head>
-<body>
+<body onload="ifcookieexist();">
 	<div class="menu">
 		<a href="inhalt/" target="inhalt" class="page-title">
 			<img src="logo32.png"><span>Schoolallroundsystem</span>

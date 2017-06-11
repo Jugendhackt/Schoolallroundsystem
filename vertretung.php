@@ -3,8 +3,8 @@
  <head>
  <meta charset="UTF-8"> 
  </head>
- <body>
- <h1>lehrerliste</h1>
+<body>
+ <h1>Lehrerliste</h1>
 
 <?php
 
@@ -28,14 +28,7 @@ require_once ('dbkonfiguration.php');
                      'dasgleiche', 
                      'sas'
                     );
-if ( $db_link )
-
-	
-{
-    echo 'Verbindung erfolgreich: ';
-    //print_r( $db_link);
-}
-else
+if (!$db_link )
 {
     // hier sollte dann später dem Programmierer eine
     // E-Mail mit dem Problem zukommen gelassen werden
@@ -59,7 +52,7 @@ echo '<table border="1">';
 while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
 {
 //var_dump($zeile);exit;	
-	echo "<tr>";
+	echo "<tr class='".$zeile['Klasse'] ."'>";
 echo "<td>". $zeile['Vorname_krank'] . " " . $zeile['Name_krank'] . "</td>";
   //echo "<td>". $zeile[''] . "</td>";
   echo "<td>". $zeile['Fachname'] . "</td>";
