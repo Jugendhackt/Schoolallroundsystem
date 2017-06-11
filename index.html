@@ -92,25 +92,33 @@ iframe {
 	border: 0px;
 	}
 </style>
-	
 </head>
-<body>
+<script>
+function ifcookiemissig() {
+	if(document.cookie == "") {window.location = "login.html"}
+}
+function logout() {
+	document.cookie = "";
+	window.location = "login.html"
+}
+</script>
+<body onload="ifcookiemissig();">
 	<div class="menu">
 		<a href="inhalt/" target="inhalt" class="page-title">
 			<img src="logo32.png"><span>Schoolallroundsystem</span>
 		</a>
 		<ul>
-			<li><a href="inhalt/" target="inhalt">Übersicht</a></li>
+			<li><a href="inhalt/ubersicht.html" target="inhalt">Übersicht</a></li>
 			<li><a href="inhalt/" target="inhalt">Profil</a></li>
 			<li><a href="inhalt/" target="inhalt">Über</a></li>
 			<li><a href="inhalt/" target="inhalt">Hilfe</a></li>
-			<li><a href="login.html">Abmelden</a></li>
+			<li><a href="#" onclick="logout();">Abmelden</a></li>
 		</ul>
 	</div>
 	
 	<div class="nav">
 		<ul>
-			<li><a href="inhalt/" target="inhalt">Übersicht</a></li>
+			<li><a href="inhalt/ubersicht.html" target="inhalt">Übersicht</a></li>
 		</ul>
 		<ul>
 			<li><a href="inhalt/vertretung.html" target="inhalt">Vertretungsplan</a></li>
@@ -125,6 +133,6 @@ iframe {
 			<li><a href="inhalt/" target="inhalt">Chat</a></li>
 		<ul>
 	</div>
-	<iframe src="inhalt/vertretung.html" name="inhalt"></iframe> 
+	<iframe src="inhalt/ubersicht.html" name="inhalt"></iframe> 
 </body>
 </html>
