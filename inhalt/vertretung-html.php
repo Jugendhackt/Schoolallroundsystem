@@ -80,7 +80,7 @@ if ($mysqli->connect_errno) {
 }
 echo $mysqli->host_info . "\n";
 exit;*/
-require_once ('dbkonfiguration.php');
+//require_once ('dbkonfiguration.php');
 
 /*$db_link = mysqli_connect (
                      MYSQL_HOST, 
@@ -98,7 +98,7 @@ if ( $db_link )
 
 	
 {
-    echo 'Verbindung erfolgreich: ';
+  //  echo 'Verbindung erfolgreich: ';
     //print_r( $db_link);
 }
 else
@@ -121,12 +121,20 @@ if ( ! $db_erg )
   die('Ungültige Abfrage: ' . mysqli_error() . "!");
 }
  
-echo '<table>';
+echo '<table>'; 
+echo '<tr>';
+		echo '<th>Kranker Lehrer</th>';
+		echo '<th>Fach</th>';
+		echo '<th>Vertretungslehrer</th>';
+		echo '<th>Klasse</th>';
+	echo '</tr>';
+
+
 while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
 {
 //var_dump($zeile);exit;	
-	echo "<tr>";
-echo "<td class='" . $zeile['Klasse'] . "'>" . $zeile['Vorname_krank'] . " " . $zeile['Name_krank'] . "</td>";
+	echo "<tr class='".$zeile['Klasse'] ."'>";
+echo "<td>" . $zeile['Vorname_krank'] . " " . $zeile['Name_krank'] . "</td>";
   //echo "<td>". $zeile[''] . "</td>";
   echo "<td>". $zeile['Fachname'] . "</td>";
  echo "<td>". $zeile['Vorname_vertretung'] . " " . $zeile['Name_vertretung'] . "</td>";
